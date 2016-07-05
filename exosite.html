@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Aula Wemos D1 mini nas Nuvens</title>
+</head>
+
+<body>
+<h3>
+<strong>
+IFPB - Campus J Pessoa
+<br>
+Mestrado em Engenharia Elétrica
+<br>
+Sistemas Embarcados
+<br>
+Semestre: 2016.1
+<br>
+Bruno F Gouveia
+</strong>
+<br>
+</h3>
+
+<h1 align=center>Wemos D1 mini na Nuvem </h1>
+
+
+<section id="main-content">
+	<h3> Exosite</h3>
+Este tutorial irá explicar como configurar um Portal gratuitos, criar uma conta,dispositivo e dados associado, enviar dados para esse dispositivo, e exibir os dados em um widget na sua página inicial do painel.
+
+<h2>Pré-Requisitos</h2>
+<ul>
+<li>
+	<p>Computador com acesso a internet</p>
+</li>
+<li>
+	<p>Conta de Email Ativa</p>
+</li>
+</ul>
+
+<h2>Criando Conta</h2>
+Para começar, você precisa criar uma conta. Se você já possui uma conta, você pode avançar para a "criar um novo dispositivo" deste documento.
+
+<ol>
+<li>Acessar o site do Exosite’s <a href="http://portals.exosite.com/signup">Account Sign Up web page</a>.</li>
+<li>Complete o formulário e criar a conta. <br>
+<img src="imagem/signup.jpg" alt="image alt text" style="max-width:100%;"></li>
+<li>Você receberá um e-mail do portals.exosite.com que lhe pede para ativar sua conta. Clique no link apropriado no e-mail para ativar sua conta.</li>
+<li>Quando concluída, faça o login na sua conta <a href="https://portals.exosite.com/login">Portals login page</a> usando seu endereço de e-mail ea senha que você acabou de criar..
+<img src="Imagem/login.jpg" alt="image alt text" style="max-width:100%;"></li>
+
+
+
+Portal<br>
+<img src="Imagem/portal.png" alt="image alt text" style="max-width:50%;">
+<br>
+
+Exemplo<br> 
+<img src="Imagem/myportal.jpg" alt "image alt text" style="max-width:50%;">
+
+
+
+<h2>Criando novo Device</h2>
+
+<p> Para os fins deste tutorial, este dispositivo será temperatura para o qual você pode gravar dados da temperatura Ambiente.</p>
+
+<ol>
+
+<li> Selecione Devices na barra lateral e na pagina, click "+ Add Device." A <em>Device Setup *window will open. On the *Setup Type</em> tab, selecione a opção "I want to create a generic device." Click Continue.
+	<br>
+<img src="Imagem/devices.jpg" alt "image alt text" style="max-width:50%;"></li>
+
+<li> <em>Device Setup</em> :
+
+<ol>
+<li>Verifique se o tipo de dispositivo menu drop-down é definido como genérico..</li>
+<li>Selecione seu fuso horário.</li>
+<li>Digite um local no campo <em>Device Location</em> A localização pode ser qualquer coisa que indica a localização do dispositivo, mas não pode ser deixado vazio. No exemplo a seguir, a localização é definida para João Pessoa.</li>
+<li>Click Continue.
+	<br>
+<img src="Imagem/devices2.jpg" alt "image alt text" style="max-width:50%;"></li>
+<li>Em seguida especifique um nome para o dispositivo.</li>
+
+<br>
+Agora você deve ver o dispositivo que você acabou de criar. Para visualizar as informações pertinentes sobre o dispositivo, clique no dispositivo para abrir a janela de Informações do dispositivo.
+<br>
+<img src="Imagem/devices3.jpg" alt "image alt text" style="max-width:50%;"></li>
+
+
+</ol>
+
+</ol>
+
+<h2>Criando novo Dado</h2>
+
+
+<p>Para gravar dados no dispositivo que você acabou de criar, você precisa primeiro criar uma porta de dados para conter os dados. A porta de dados contém uma série de pontos com registro de tempo e pode viver dentro de um dispositivo ou de um portal.</p>
+
+<ol>
+<li>Selecione "Data" do menu Portal para exibir uma lista de todos os dispositivos em seu portal e suas portas de dados associados.
+</li>
+<li>Em <em>Data</em>, click "+ Add Data."
+
+<li>Abrirar a janela da <em>Data Setup</em>:
+
+<ol>
+<li>Selecione o rótulo do botão de rádio "From a Device" já que você está adicionando uma porta de dados para o dispositivo que você acabou de criar.</li>
+<li>Selecione o dispositivo que você acabou de criar</li>
+<li>Click Continue.<br>
+<img src="Imagem/datasetup.jpg" alt "image alt text" style="max-width:50%;"></li>
+
+<li><p>Since a wind turbine can tell you the wind speed at a given time, you will make that the first datapoint. In the *Configuration *tab:</p>
+
+<ol>
+<li>Enter Wind Speed in the *Data Source Name *field. This is a name that widgets can use to describe the data in this dataport to dashboard users.</li>
+<li>Select integer from the <em>Data Source Format</em> drop-down menu. This indicates the format of data (integer, float, string, binary) that will come from the device.</li>
+<li>Enter kph in the *Unit *field. This indicates the type of measurement for the data. In the example below, the wind speed will be measured in kilometers per hour.</li>
+<li>Enter windspeed in the *Alias *field. This s the name devices will use to identify this dataport when accessing Exosite’s application programming interfaces (APIs).</li>
+<li>Click Submit.</li>
+</ol>
+
+<p><a href="https://github.com/exosite/docs/blob/master/tutorials/get-started/images/image_12.png" target="_blank"><img src="./docs_tutorials_get-started at master · exosite_docs · GitHub_files/image_12.png" alt="image alt text" style="max-width:100%;"></a></p></li>
+<li><p>You should see a <em>Data Source Successfully Created</em> message. Click Quit to return to your dataport list.
+<a href="https://github.com/exosite/docs/blob/master/tutorials/get-started/images/image_13.png" target="_blank"><img src="./docs_tutorials_get-started at master · exosite_docs · GitHub_files/image_13.png" alt="image alt text" style="max-width:100%;"></a>
+You should now see the dataport you just created on the <em>Data</em> page.
+<a href="https://github.com/exosite/docs/blob/master/tutorials/get-started/images/image_14.png" target="_blank"><img src="./docs_tutorials_get-started at master · exosite_docs · GitHub_files/image_14.png" alt="image alt text" style="max-width:100%;"></a></p></li>
+<li>Select "Home" from the Portal menu to return to the dashboard homepage.
+<a href="https://github.com/exosite/docs/blob/master/tutorials/get-started/images/image_15.png" target="_blank"><img src="./docs_tutorials_get-started at master · exosite_docs · GitHub_files/image_15.png" alt="image alt text" style="max-width:100%;"></a></li>
+<li><p>You may notice that the dataport you just added is not listed in the Portal Data Source List widget; that widget has not been configured to display this dataport. Click the arrow in the corner of the widget and select Edit to add the dataport.</p>
+
+<p><a href="https://github.com/exosite/docs/blob/master/tutorials/get-started/images/image_16.png" target="_blank"><img src="./docs_tutorials_get-started at master · exosite_docs · GitHub_files/image_16.png" alt="image alt text" style="max-width:100%;"></a></p></li>
+<li><p>Select the checkbox for the new dataport in the <em>Data Sources</em> list. Leave the <em>Selectable</em>, <em>Set Caller</em>, and <em>Refresh Rate</em> fields at their defaults. Click Save.
+<a href="https://github.com/exosite/docs/blob/master/tutorials/get-started/images/image_17.png" target="_blank"><img src="./docs_tutorials_get-started at master · exosite_docs · GitHub_files/image_17.png" alt="image alt text" style="max-width:100%;"></a></p>
+
+<p>You should now see the dataport value listed in the Portal Data Source List widget on your dashboard homepage.</p>
+
+<p><a href="https://github.com/exosite/docs/blob/master/tutorials/get-started/images/image_18.png" target="_blank"><img src="./docs_tutorials_get-started at master · exosite_docs · GitHub_files/image_18.png" alt="image alt text" style="max-width:100%;"></a></p></li>
+</ol>
+
+</section>
+
+</body>
+
+</html>
